@@ -19,7 +19,7 @@ public class PrognozaPogody implements WyswietlElement, Obserwator {
     //dodajemy do tablicy
     public void aktualizacja(Float temperatura, Float wilgotnosc, Float cisnienie) {
         temperatury.add(temperatura);
-        prognozowanaTemperatura= liczycPrognoze();
+        prognozowanaTemperatura = liczycPrognoze();
         wyswietl();
     }
 
@@ -31,16 +31,22 @@ public class PrognozaPogody implements WyswietlElement, Obserwator {
 
     public String liczycPrognoze() {
         String zmiennaPrognozujaca;
-        if (temperatury.size()<2) {
+        if (temperatury.size() < 2) {
             return ("Za mało danych do liczenia prognozy");
         } else {
-            if (temperatury.get(temperatury.size() - 1) > temperatury.get(temperatury.size() - 2)) {
-                return "Prognozujemy iż bedzie ciepło";
-            } else if (temperatury.get(temperatury.size() - 1) == temperatury.get(temperatury.size() - 2)) {
-                return "Prawdopodobnie temp się utrzyma";
-            }
+            return prognozaBiezaca();
         }
-         return "Winter is coming";
+
+    }
+
+    private String prognozaBiezaca() {
+        if (temperatury.get(temperatury.size() - 1) > temperatury.get(temperatury.size() - 2)) {
+            return "Prognozujemy iż bedzie ciepło";
+        } else if (temperatury.get(temperatury.size() - 1) == temperatury.get(temperatury.size() - 2)) {
+            return "Prawdopodobnie temp się utrzyma";
+        }else {
+            return "Winter is coming";
         }
     }
+}
 
