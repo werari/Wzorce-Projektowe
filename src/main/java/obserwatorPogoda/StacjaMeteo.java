@@ -5,6 +5,7 @@ public class StacjaMeteo {
     public static void main(String[] args) {
         DanePogodowe danePogodowe = new DanePogodowe();
         StatystykaPogodowa statystykaPogodowa = new StatystykaPogodowa(danePogodowe);
+        PrognozaPogody prognozaPogody = new PrognozaPogody(danePogodowe);
 
         WarunkiBiezaceWyswietl warunkiBiezaceWyswietl = new WarunkiBiezaceWyswietl(danePogodowe);
 
