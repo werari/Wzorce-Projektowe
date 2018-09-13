@@ -44,7 +44,7 @@ public class PrognozaPogody implements WyswietlElement, Obserwator {
             return "Prognozujemy iż bedzie ciepło";
         } else if (temperatury.get(temperatury.size() - 1) == temperatury.get(temperatury.size() - 2)) {
             return "Prawdopodobnie temp się utrzyma";
-        }else {
+        } else {
             return "Winter is coming";
         }
     }
