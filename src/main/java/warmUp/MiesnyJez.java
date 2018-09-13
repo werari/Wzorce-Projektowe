@@ -1,4 +1,4 @@
-package WarmUp;
+package warmUp;
 
 public class MiesnyJez extends Pizza {
 

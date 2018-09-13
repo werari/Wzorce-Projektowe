@@ -1,4 +1,4 @@
-package WarmUp;
+package warmUp;
 
 public class Arabiata extends Pasta {
     public Arabiata() {
